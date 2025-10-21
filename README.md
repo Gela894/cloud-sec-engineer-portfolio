@@ -8,7 +8,7 @@ This repository showcases my hands-on projects, compliance documentation, and De
 ## 🧠 About Me
 I’m a former U.S. Navy ISSO transitioning into a **Cloud Security Engineer** role, focused on secure cloud design, automation, and continuous monitoring in regulated environments.
 
-📄 [View My Resume](./resume/Cloud_Security_Engineer_Resume.pdf)
+📄 [View My Resume](. "C:\Users\user\OneDrive\Documents\Resume & Interview\Angie's Resume\Risk & Compliance Resume\AngelaHorga_CloudDevSecOps_Resume.pdf")
 
 ---
 
@@ -34,8 +34,8 @@ I’m a former U.S. Navy ISSO transitioning into a **Cloud Security Engineer** r
 ---
 
 ## 🪪 Certifications
-- GIAC Cloud Security Essentials (GCLD)
-- GIAC Public Cloud Security (GPCS)
-- GIAC Cloud Security Automation (GCSA)
-- GIAC Cloud Threat Detection (GCTD)
+- GIAC Cloud Security Essentials (GCLD) *(in progress)*
+- GIAC Public Cloud Security (GPCS) *(in progress)*
+- GIAC Cloud Security Automation (GCSA) *(in progress)*
+- GIAC Cloud Threat Detection (GCTD) *(in progress)*
 - AWS Certified Security – Specialty *(in progress)*
