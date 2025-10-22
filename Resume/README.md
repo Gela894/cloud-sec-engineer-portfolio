@@ -1,6 +1,6 @@
 # 📄 Cloud Security Engineer Resume
 
-**Download PDF:** [AngelaHorga_CloudDevSecOps_Resume.pdf]( . "https://github.com/Gela894/cloud-sec-engineer-portfolio/blob/main/Resume/AngelaHorga_CloudDevSecOps_Resume.pdf")
+**Download PDF:** [AngelaHorga_CloudDevSecOps_Resume.pdf](https://github.com/Gela894/cloud-sec-engineer-portfolio/raw/main/Resume/AngelaHorga_CloudDevSecOps_Resume.pdf)
 
 ## Highlights
 - Designed Zero Trust AWS architectures aligned with DoD CIO ZT pillars.
