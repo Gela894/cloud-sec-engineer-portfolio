@@ -1,6 +1,6 @@
 # 📄 Cloud Security Engineer Resume
 
-**Download PDF:** [Cloud_Security_Engineer_Resume.pdf](C:\Users\user\OneDrive\Documents\Resume & Interview\Angie's Resume\Risk & Compliance Resume\AngelaHorga_CloudDevSecOps_Resume.pdf)
+**Download PDF:** [Cloud_Security_Engineer_Resume.pdf]( . "C:\Users\user\OneDrive\Documents\Resume & Interview\Angie's Resume\Risk & Compliance Resume\AngelaHorga_CloudDevSecOps_Resume.pdf")
 
 ## Highlights
 - Designed Zero Trust AWS architectures aligned with DoD CIO ZT pillars.
