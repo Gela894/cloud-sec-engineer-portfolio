@@ -17,10 +17,10 @@ I’m a former U.S. Navy ISSO transitioning into a **Cloud Security Engineer** r
 | # | Project | Description | Framework Alignment |
 |---|----------|--------------|---------------------|
 | 1 | [Secure VPC Deployment](./Projects/secure-vpc-deployment) | Hardened AWS network w/ least privilege IAM & logging | NIST AC, AU, SC |
-| 2 | [AWS Config Auto-Remediation](./projects/2-aws-config-remediation) | Lambda + EventBridge compliance automation | NIST CM, SI |
-| 3 | [DevSecOps Pipeline](./projects/3-devsecops-pipeline) | Terraform + Checkov + GitHub Actions | RMF Step 4 (Implement) |
-| 4 | [GuardDuty Incident Response](./projects/4-guardduty-ir-automation) | Automated detection & isolation workflow | NIST IR, SI |
-| 5 | [Zero Trust Cloud Architecture](./projects/5-zero-trust-architecture) | ABAC, encryption, and private networking | DoD ZT Identity, Data |
+| 2 | [AWS Config Auto-Remediation](./Projects/aws-config-remediation) | Lambda + EventBridge compliance automation | NIST CM, SI |
+| 3 | [DevSecOps Pipeline](./Projects/devsecops-pipeline) | Terraform + Checkov + GitHub Actions | RMF Step 4 (Implement) |
+| 4 | [GuardDuty Incident Response](./Projects/guardduty-ir-automation) | Automated detection & isolation workflow | NIST IR, SI |
+| 5 | [Zero Trust Cloud Architecture](./Projects/zero-trust-architecture) | ABAC, encryption, and private networking | DoD ZT Identity, Data |
 
 ---
 
