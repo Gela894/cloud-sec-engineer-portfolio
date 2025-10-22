@@ -8,7 +8,7 @@ This repository showcases my hands-on projects, compliance documentation, and De
 ## 🧠 About Me
 I’m a former U.S. Navy ISSO transitioning into a **Cloud Security Engineer** role, focused on secure cloud design, automation, and continuous monitoring in regulated environments.
 
-📄 [View My Resume](. "https://github.com/Gela894/cloud-sec-engineer-portfolio/blob/main/Resume/AngelaHorga_CloudDevSecOps_Resume.pdf")
+📄 [View My Resume](./Resume/AngelaHorga_CloudDevSecOps_Resume.pdf")
 
 ---
 
