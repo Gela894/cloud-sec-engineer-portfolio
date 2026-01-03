@@ -29,5 +29,5 @@ Cloud Security Engineering • IAM • Network Security • Threat Detection •
 - GIAC Cloud Security Essentials (GCLD) *(in progress)*
 - GIAC Public Cloud Security (GPCS) *(in progress)*
 - GIAC Cloud Security Automation (GCSA) *(in progress)*
-- GIAC Cloud Threat Detection (GCTD) *(in progress)*
+- GIAC Cloud Security Architecture (GCAD) *(in progress)*
 - AWS Certified Security – Specialty *(in progress)*
