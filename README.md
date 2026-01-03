@@ -1,36 +1,28 @@
-# ☁️ Cloud Security Engineer Portfolio
+# Cloud Security Engineer Portfolio
 
-Welcome to my all-in-one Cloud Security Engineer portfolio.  
-This repository showcases my hands-on projects, compliance documentation, and DevSecOps automation aligned with **federal and defense sector standards** — including NIST 800-53, FedRAMP, RMF, and the DoD Zero Trust Strategy.
+I’m a Cloud Security Engineer with a background in security auditing and compliance, now focused on building secure-by-design cloud environments in AWS.
 
----
+This GitHub highlights hands-on security projects demonstrating:
+- Secure cloud networking (VPC, subnets, routing)
+- Least-privilege IAM design
+- Centralized logging and threat detection
+- Infrastructure-as-Code (Terraform / CloudFormation)
 
-## 🧠 About Me
-I’m a former U.S. Navy ISSO transitioning into a **Cloud Security Engineer** role, focused on secure cloud design, automation, and continuous monitoring in regulated environments.
+## 🔹 Featured Projects
+- **Secure VPC Deployment** – Secure AWS network architecture with threat modeling  
+- **Securing a 2-Tier Web Application** – Network, IAM, and logging controls  
+- **IAM Least Privilege Lab** – Role design and permission scoping  
+- **Cloud Logging & Detection** – CloudTrail, Flow Logs, GuardDuty
 
-📄 [View My Resume](./Resume/AngelaHorga_CloudDevSecOps_Resume.pdf)
+👉 **Deep technical documentation, diagrams, and validation evidence are hosted in Notion:**  
+[Cloud Security Portfolio – Notion](PASTE_MASTER_DASHBOARD_LINK)
 
----
+## 🛠 Tools & Technologies
+AWS | IAM | VPC | EC2 | CloudWatch | CloudTrail | GuardDuty  
+Terraform | CloudFormation | Linux | Bash
 
-## ⚙️ Featured Projects
-
-| # | Project | Description | Framework Alignment |
-|---|----------|--------------|---------------------|
-| 1 | [Secure VPC Deployment](./Projects/secure-vpc-deployment) | Hardened AWS network w/ least privilege IAM & logging | NIST AC, AU, SC |
-| 2 | [AWS Config Auto-Remediation](./Projects/aws-config-remediation) | Lambda + EventBridge compliance automation | NIST CM, SI |
-| 3 | [DevSecOps Pipeline](./Projects/devsecops-pipeline) | Terraform + Checkov + GitHub Actions | RMF Step 4 (Implement) |
-| 4 | [GuardDuty Incident Response](./Projects/guardduty-ir-automation) | Automated detection & isolation workflow | NIST IR, SI |
-| 5 | [Zero Trust Cloud Architecture](./Projects/zero-trust-architecture) | ABAC, encryption, and private networking | DoD ZT Identity, Data |
-
----
-
-## 📘 Documentation
-
-- [NIST 800-53 Control Mapping](./docs/NIST_800-53_Control_Mapping.md)
-- [RMF Continuous Monitoring Plan](./docs/RMF_Continuous_Monitoring_Plan.md)
-- [Zero Trust Architecture Overview](./docs/Zero_Trust_Architecture_Overview.md)
-- [FedRAMP Framework Overview](./docs/FedRAMP_Framework_Overview.md)
-
+## 🎯 Focus Areas
+Cloud Security Engineering • IAM • Network Security • Threat Detection • Automation
 ---
 
 ## 🪪 Certifications
