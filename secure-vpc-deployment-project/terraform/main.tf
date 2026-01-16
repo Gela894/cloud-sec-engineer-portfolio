@@ -136,3 +136,103 @@ resource "aws_route_table_association" "privateData_B_assoc" {
   subnet_id      = aws_subnet.privateData_B.id
   route_table_id = aws_route_table.privateData_rt.id
 }
+
+#Create a NAT Gateway per AZ
+resource "aws_nat_gateway" "nat_gw_A" {
+  allocation_id = aws_eip.nat_eip_A.id
+  subnet_id     = aws_subnet.publicAPP_A.id
+  tags = {
+    Name = "secure-vpc-nat-gw-A"
+  }
+}
+resource "aws_nat_gateway" "nat_gw_B" {
+  allocation_id = aws_eip.nat_eip_B.id
+  subnet_id     = aws_subnet.publicAPP_B.id
+  tags = {
+    Name = "secure-vpc-nat-gw-B"
+  }
+}
+# Create an Elastic IP for each NAT Gateway
+resource "aws_eip" "nat_eip_A" {
+  domain = "vpc"
+}
+resource "aws_eip" "nat_eip_B" {
+  domain = "vpc"
+}
+# Update the PrivateApp Route Table to include routes to the NAT Gateways
+resource "aws_route" "privateAPP_nat_gw_A" {
+  route_table_id         = aws_route_table.privateAPP_rt.id
+  destination_cidr_block = "0.0.0.0/0"
+  nat_gateway_id         = aws_nat_gateway.nat_gw_A.id
+}
+resource "aws_route" "privateAPP_nat_gw_B" {
+  route_table_id         = aws_route_table.privateAPP_rt.id
+  destination_cidr_block = "0.0.0.0/0"
+  nat_gateway_id         = aws_nat_gateway.nat_gw_B.id
+}
+# Update the PrivateData Route Table to include routes to the NAT Gateways
+resource "aws_route" "privateData_nat_gw_A" {
+  route_table_id         = aws_route_table.privateData_rt.id
+  destination_cidr_block = "0.0.0.0/0"
+  nat_gateway_id         = aws_nat_gateway.nat_gw_A.id
+}
+resource "aws_route" "privateData_nat_gw_B" {
+  route_table_id         = aws_route_table.privateData_rt.id
+  destination_cidr_block = "0.0.0.0/0"
+  nat_gateway_id         = aws_nat_gateway.nat_gw_B.id
+}
+# Verify private subnets do not automatically assign public IPs
+resource "aws_subnet_public_ip_on_launch" "privateAPP_A_no_public_ip" {
+  subnet_id                 = aws_subnet.privateAPP_A.id
+  map_public_ip_on_launch   = false
+}
+# Create VPC Endpoints for S3 and Interface Endpoints for other services (SSM, EC2 messages, SSM messages, CloudWatch logs)
+resource "aws_vpc_endpoint" "s3_endpoint" {
+  vpc_id            = aws_vpc.main.id
+  service_name      = "com.amazonaws.${var.region_name}.s3"
+  vpc_endpoint_type = "Gateway"
+  route_table_ids   = [aws_route_table.privateAPP_rt.id, aws_route_table.privateData_rt.id]
+  tags = {
+    Name = "secure-vpc-s3-endpoint"
+  }
+}
+resource "aws_vpc_endpoint" "ssm_endpoint" {
+  vpc_id            = aws_vpc.main.id
+  service_name      = "com.amazonaws.${var.region_name}.ssm"
+  vpc_endpoint_type = "Interface"
+  subnet_ids        = [aws_subnet.privateAPP_A.id, aws_subnet.privateAPP_B.id]
+  security_group_ids = [aws_security_group.vpc_endpoint_sg.id]
+  tags = {
+    Name = "secure-vpc-ssm-endpoint"
+  }
+}
+resource "aws_vpc_endpoint" "ec2_messages_endpoint" {
+  vpc_id            = aws_vpc.main.id
+  service_name      = "com.amazonaws.${var.region_name}.ec2messages"
+  vpc_endpoint_type = "Interface"
+  subnet_ids        = [aws_subnet.privateAPP_A.id, aws_subnet.privateAPP_B.id]
+  security_group_ids = [aws_security_group.vpc_endpoint_sg.id]
+  tags = {
+    Name = "secure-vpc-ec2-messages-endpoint"
+  }
+}
+resource "aws_vpc_endpoint" "ssm_messages_endpoint" {
+  vpc_id            = aws_vpc.main.id
+  service_name      = "com.amazonaws.${var.region_name}.ssmmessages"
+  vpc_endpoint_type = "Interface"
+  subnet_ids        = [aws_subnet.privateAPP_A.id, aws_subnet.privateAPP_B.id]
+  security_group_ids = [aws_security_group.vpc_endpoint_sg.id]
+  tags = {
+    Name = "secure-vpc-ssm-messages-endpoint"
+  }
+}
+resource "aws_vpc_endpoint" "cloudwatch_logs_endpoint" {
+  vpc_id            = aws_vpc.main.id
+  service_name      = "com.amazonaws.${var.region_name}.logs"
+  vpc_endpoint_type = "Interface"
+  subnet_ids        = [aws_subnet.privateAPP_A.id, aws_subnet.privateAPP_B.id]
+  security_group_ids = [aws_security_group.vpc_endpoint_sg.id]
+  tags = {
+    Name = "secure-vpc-cloudwatch-logs-endpoint"
+  }
+}

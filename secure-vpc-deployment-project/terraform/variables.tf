@@ -4,7 +4,3 @@ variable "region_name" {
   default     = "us-east-1"
 }
 
-variable "aws_account_id" {
-  description = "AWS Account ID"
-  type        = string
-}
